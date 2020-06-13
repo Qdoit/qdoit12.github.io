@@ -1,7 +1,7 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: whitesmoke;
-    background-color: #373737;
+    background-color: #1D1E1F;
     font-size: 18px;
 }
 
@@ -10,7 +10,7 @@ body {
     margin-right: auto;
     width: 100%;
     /*display: flex;*/
-    
+    min-height: 50%;
 }
 
 .logo {
@@ -20,9 +20,7 @@ body {
     float: left;
     padding: 5px;
     margin-left: 0px;
-    border-right: 2px dotted #444444;
     text-align: center;
-    background-color: #0a0a0a;
 
 }
 
@@ -81,15 +79,12 @@ a:hover {
 
 
 
-#content {
-    width: calc(100% - 25%);
-    /*flex: 1;*/
+#content 
+{
+    height: 100%;
     color: #d8d8d8;
-    float: left;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-top: 20px;
-    margin-top: 10px;
+    float: right;
+    width: 80%;
 }
 
 .dropdown {
@@ -117,13 +112,14 @@ a:hover {
   
 
 #sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x:hidden;
     height: 100%;
     background-color: #252525;
-    float: right;
-    padding-left: 40px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 100px;
+    float: left;
     width: 20%;
     text-align: left;
     color: #7a7a7a;
