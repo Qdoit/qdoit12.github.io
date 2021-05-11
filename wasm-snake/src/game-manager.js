@@ -1,9 +1,9 @@
-import { Game, Vector } from '../../pkg/app'
+import { Game, Vector } from '../../pkg/app.js'
 
-import CONFIG from './config'
-import { View } from './view'
-import { Controller } from './controller'
-import Storage from './storage'
+import CONFIG from './config.js'
+import { View } from './view.js'
+import { Controller } from './controller.js'
+import Storage from './storage.js'
 
 export class GameManager {
     constructor() {

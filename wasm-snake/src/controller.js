@@ -1,4 +1,4 @@
-import { Movement } from "../../pkg/app"
+import { Movement } from "../../pkg/app.js"
 
 const MOVEMENT_KEYS = {
     [Movement.TOP]: [87, 38],
