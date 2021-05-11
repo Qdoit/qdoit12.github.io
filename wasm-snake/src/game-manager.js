@@ -1,4 +1,4 @@
-import { Game, Vector } from '../pkg/app'
+import { Game, Vector } from '../../pkg/app'
 
 import CONFIG from './config'
 import { View } from './view'
