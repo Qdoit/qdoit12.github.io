@@ -1,4 +1,4 @@
-import { Movement } from "wasm-snake-game"
+import { Movement } from "../pkg/app"
 
 const MOVEMENT_KEYS = {
     [Movement.TOP]: [87, 38],
