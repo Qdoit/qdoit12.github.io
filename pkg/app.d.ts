@@ -148,3 +148,55 @@ export class Vector {
 */
   y: number;
 }
+
+export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
+
+export interface InitOutput {
+  readonly memory: WebAssembly.Memory;
+  readonly greet: () => void;
+  readonly __wbg_vector_free: (a: number) => void;
+  readonly __wbg_get_vector_x: (a: number) => number;
+  readonly __wbg_set_vector_x: (a: number, b: number) => void;
+  readonly __wbg_get_vector_y: (a: number) => number;
+  readonly __wbg_set_vector_y: (a: number, b: number) => void;
+  readonly __wbg_game_free: (a: number) => void;
+  readonly __wbg_get_game_width: (a: number) => number;
+  readonly __wbg_set_game_width: (a: number, b: number) => void;
+  readonly __wbg_get_game_height: (a: number) => number;
+  readonly __wbg_set_game_height: (a: number, b: number) => void;
+  readonly __wbg_get_game_snake_speed: (a: number) => number;
+  readonly __wbg_set_game_snake_speed: (a: number, b: number) => void;
+  readonly __wbg_get_game_snake_direction: (a: number) => number;
+  readonly __wbg_set_game_snake_direction: (a: number, b: number) => void;
+  readonly __wbg_get_game_food_location: (a: number) => number;
+  readonly __wbg_set_game_food_location: (a: number, b: number) => void;
+  readonly __wbg_get_game_score: (a: number) => number;
+  readonly __wbg_set_game_score: (a: number, b: number) => void;
+  readonly game_new: (a: number, b: number, c: number, d: number, e: number) => number;
+  readonly game_process: (a: number, b: number, c: number) => void;
+  readonly game_process_movement: (a: number, b: number, c: number) => void;
+  readonly game_process_food: (a: number) => void;
+  readonly game_is_over: (a: number) => number;
+  readonly game_get_snake: (a: number) => number;
+  readonly vector_new: (a: number, b: number) => number;
+  readonly vector_legacy_substract: (a: number, b: number) => number;
+  readonly vector_legacy_add: (a: number, b: number) => number;
+  readonly vector_legacy_equal_to: (a: number, b: number) => number;
+  readonly vector_is_opposite: (a: number, b: number) => number;
+  readonly vector_opposite: (a: number) => number;
+  readonly vector_normalize: (a: number) => number;
+  readonly vector_scale_by: (a: number, b: number) => number;
+  readonly vector_len: (a: number) => number;
+  readonly vector_dot_product: (a: number, b: number) => number;
+  readonly __wbindgen_exn_store: (a: number) => void;
+}
+
+/**
+* If `module_or_path` is {RequestInfo} or {URL}, makes a request and
+* for everything else, calls `WebAssembly.instantiate` directly.
+*
+* @param {InitInput | Promise<InitInput>} module_or_path
+*
+* @returns {Promise<InitOutput>}
+*/
+export default function init (module_or_path?: InitInput | Promise<InitInput>): Promise<InitOutput>;
